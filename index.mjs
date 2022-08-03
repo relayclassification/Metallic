@@ -8,12 +8,6 @@ const server = http.createServer();
 import path from 'path';
 const __dirname = path.resolve();
 
-if (!fs.existsSync("build")) {
-    console.log("Building Metallic")
-    execSync("npm run build")
-	fs.writeFileSync(__dirname + "/build/404.html", fs.readFileSync(__dirname + "/build/index.html"));
-}
-
 app.use(express.static("build"));
 
 app.use(function(req, res) {
