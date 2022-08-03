@@ -5,6 +5,7 @@ import http from 'http';
 import express from 'express';
 const app = express();
 const server = http.createServer();
+const port = process.env.PORT || config.port
 import path from 'path';
 const __dirname = path.resolve();
 
@@ -41,7 +42,7 @@ server.on('upgrade', (req, socket, head) => {
 });
 
 server.on('listening', () => {
-	console.log('Metallic running on port 8080');
+	console.log('Metallic running on port ' + port);
 });
 
-server.listen(8080);
+server.listen(port);
