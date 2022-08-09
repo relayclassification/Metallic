@@ -73,6 +73,6 @@ Backgrounds
 
 A:BC
 
-Support­‍ page
+Support page
 
 Adblocking
